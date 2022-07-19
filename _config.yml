@@ -1,0 +1,12 @@
+title: Highway RoadMap
+email: ruansp@nus.edu.sg
+description:
+  Project page for "Efficient Path Planning in Narrow Passages for Robots with Ellipsoidal Components". A path planning paradigm based on closed-form characterization of free space.
+github_username: ruansp
+theme: jekyll-theme-cayman
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
