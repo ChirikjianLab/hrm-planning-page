@@ -11,7 +11,7 @@
 Accepted to __IEEE Transactions on Robotics (T-RO)__
 
 ## Introduction
-![My photo](/resources/demo.png "My photo"){:style="float: left;margin-right: 7px;margin-top: 7px;" height="40%" width="40%"} Path planning has long been one of the major research areas in robotics, with PRM and RRT being two of the most effective classes of planners. Though generally very efficient, these sampling-based planners can become computationally expensive in the important case of "narrow passages". This paper develops a path planning paradigm specifically formulated for narrow passage problems. The core is based on planning for rigid-body robots encapsulated by unions of ellipsoids. Each environmental feature is represented geometrically using a strictly convex body with a C<sup>1</sup> boundary (e.g., superquadric). The main benefit of doing this is that configuration-space obstacles can be parameterized explicitly in closed form, thereby allowing prior knowledge to be used to avoid sampling infeasible configurations. Then, by characterizing a tight volume bound for multiple ellipsoids, robot transitions involving rotations are guaranteed to be collision-free without needing to perform traditional collision detection. Furthermore, by combining with a stochastic sampling strategy, the proposed planning framework can be extended to solving higher dimensional problems in which the robot has a moving base and articulated appendages. Benchmark results show that the proposed framework often outperforms the sampling-based planners in terms of computational time and success rate in finding a path through narrow corridors for both single-body robots and those with higher dimensional configuration spaces. Physical experiments using the proposed framework are further demonstrated on a humanoid robot that walks in several cluttered environments with narrow passages.
+![My photo]({{site.baseurl}}/resources/demo.png "My photo"){:style="float: left;margin-right: 7px;margin-top: 7px;" height="40%" width="40%"} Path planning has long been one of the major research areas in robotics, with PRM and RRT being two of the most effective classes of planners. Though generally very efficient, these sampling-based planners can become computationally expensive in the important case of "narrow passages". This paper develops a path planning paradigm specifically formulated for narrow passage problems. The core is based on planning for rigid-body robots encapsulated by unions of ellipsoids. Each environmental feature is represented geometrically using a strictly convex body with a C<sup>1</sup> boundary (e.g., superquadric). The main benefit of doing this is that configuration-space obstacles can be parameterized explicitly in closed form, thereby allowing prior knowledge to be used to avoid sampling infeasible configurations. Then, by characterizing a tight volume bound for multiple ellipsoids, robot transitions involving rotations are guaranteed to be collision-free without needing to perform traditional collision detection. Furthermore, by combining with a stochastic sampling strategy, the proposed planning framework can be extended to solving higher dimensional problems in which the robot has a moving base and articulated appendages. Benchmark results show that the proposed framework often outperforms the sampling-based planners in terms of computational time and success rate in finding a path through narrow corridors for both single-body robots and those with higher dimensional configuration spaces. Physical experiments using the proposed framework are further demonstrated on a humanoid robot that walks in several cluttered environments with narrow passages.
 
 ## Links
 - Paper: T-RO (Available soon!), [Arxiv](https://arxiv.org/abs/2104.04658){:target="_blank"}
@@ -47,75 +47,75 @@ Baselines: PRM (with various samplers), LazyPRM, RRT, RRT-connect, EST.
   </tr>
 
   <tr id="rigid1" align="center">
-    <td><img src="/resources/benchmark/demo_3D_sparse_sq_rabbit.png" alt="sparse_rabbit" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_sparse_sq_rabbit.png" alt="sparse_rabbit_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_sparse_sq_rabbit.png" alt="sparse_rabbit_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_sparse_sq_rabbit.png" alt="sparse_rabbit" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_sparse_sq_rabbit.png" alt="sparse_rabbit_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_sparse_sq_rabbit.png" alt="sparse_rabbit_success" width="300"/></td>
   </tr>
 
   <tr id="rigid2" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_cluttered_sq_rabbit.png" alt="cluttered_rabbit" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_cluttered_sq_rabbit.png" alt="cluttered_rabbit_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_cluttered_sq_rabbit.png" alt="cluttered_rabbit_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_cluttered_sq_rabbit.png" alt="cluttered_rabbit" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_cluttered_sq_rabbit.png" alt="cluttered_rabbit_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_cluttered_sq_rabbit.png" alt="cluttered_rabbit_success" width="300"/></td>
   </tr>
 
   <tr id="rigid3" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_maze_sq_rabbit.png" alt="maze_rabbit" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_maze_sq_rabbit.png" alt="maze_rabbit_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_maze_sq_rabbit.png" alt="maze_rabbit_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_maze_sq_rabbit.png" alt="maze_rabbit" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_maze_sq_rabbit.png" alt="maze_rabbit_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_maze_sq_rabbit.png" alt="maze_rabbit_success" width="300"/></td>
   </tr>
 
   <tr id="rigid4" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_home_sq_chair.png" alt="home_chair" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_home_sq_chair.png" alt="home_chair_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_home_sq_chair.png" alt="home_chair_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_home_sq_chair.png" alt="home_chair" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_home_sq_chair.png" alt="home_chair_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_home_sq_chair.png" alt="home_chair_success" width="300"/></td>
   </tr>
   
   <tr id="articulated1" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_sparse_sq_snake_articulated.png" alt="sparse_snake" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_sparse_sq_snake_articulated.png" alt="sparse_snake_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_sparse_sq_snake_articulated.png" alt="sparse_snake_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_sparse_sq_snake_articulated.png" alt="sparse_snake" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_sparse_sq_snake_articulated.png" alt="sparse_snake_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_sparse_sq_snake_articulated.png" alt="sparse_snake_success" width="300"/></td>
   </tr>
   
   <tr id="articulated2" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_sparse_sq_tree_articulated.png" alt="sparse_tree" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_sparse_sq_tree_articulated.png" alt="sparse_tree_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_sparse_sq_tree_articulated.png" alt="sparse_tree_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_sparse_sq_tree_articulated.png" alt="sparse_tree" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_sparse_sq_tree_articulated.png" alt="sparse_tree_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_sparse_sq_tree_articulated.png" alt="sparse_tree_success" width="300"/></td>
   </tr>
   
   <tr id="articulated3" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_cluttered_sq_snake_articulated.png" alt="cluttered_snake" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_cluttered_sq_snake_articulated.png" alt="cluttered_snake_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_cluttered_sq_snake_articulated.png" alt="cluttered_snake_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_cluttered_sq_snake_articulated.png" alt="cluttered_snake" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_cluttered_sq_snake_articulated.png" alt="cluttered_snake_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_cluttered_sq_snake_articulated.png" alt="cluttered_snake_success" width="300"/></td>
   </tr>
   
   <tr id="articulated4" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_cluttered_sq_tree_articulated.png" alt="cluttered_tree" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_cluttered_sq_tree_articulated.png" alt="cluttered_tree_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_cluttered_sq_tree_articulated.png" alt="cluttered_tree_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_cluttered_sq_tree_articulated.png" alt="cluttered_tree" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_cluttered_sq_tree_articulated.png" alt="cluttered_tree_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_cluttered_sq_tree_articulated.png" alt="cluttered_tree_success" width="300"/></td>
   </tr>
   
   <tr id="articulated5" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_maze_sq_snake_articulated.png" alt="maze_snake" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_maze_sq_snake_articulated.png" alt="maze_snake_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_maze_sq_snake_articulated.png" alt="maze_snake_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_maze_sq_snake_articulated.png" alt="maze_snake" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_maze_sq_snake_articulated.png" alt="maze_snake_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_maze_sq_snake_articulated.png" alt="maze_snake_success" width="300"/></td>
   </tr>
   
   <tr id="articulated6" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_home_sq_snake_articulated.png" alt="home_snake" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_home_sq_snake_articulated.png" alt="home_snake_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_home_sq_snake_articulated.png" alt="home_snake_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_home_sq_snake_articulated.png" alt="home_snake" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_home_sq_snake_articulated.png" alt="home_snake_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_home_sq_snake_articulated.png" alt="home_snake_success" width="300"/></td>
   </tr>
   
   <tr id="articulated7" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_narrow_sq_snake_articulated.png" alt="narrow_snake" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_narrow_sq_snake_articulated.png" alt="narrow_snake_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_narrow_sq_snake_articulated.png" alt="narrow_snake_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_narrow_sq_snake_articulated.png" alt="narrow_snake" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_narrow_sq_snake_articulated.png" alt="narrow_snake_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_narrow_sq_snake_articulated.png" alt="narrow_snake_success" width="300"/></td>
   </tr>
   
   <tr id="articulated8" style="display:none" align="center">
-    <td><img src="/resources/benchmark/demo_3D_narrow_sq_tree_articulated.png" alt="narrow_tree" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_time_3D_narrow_sq_tree_articulated.png" alt="narrow_tree_time" width="300"/></td>
-    <td><img src="/resources/benchmark/bench_success_rate_3D_narrow_sq_tree_articulated.png" alt="narrow_tree_success" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/demo_3D_narrow_sq_tree_articulated.png" alt="narrow_tree" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_time_3D_narrow_sq_tree_articulated.png" alt="narrow_tree_time" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/benchmark/bench_success_rate_3D_narrow_sq_tree_articulated.png" alt="narrow_tree_success" width="300"/></td>
   </tr>
   
 </table>
@@ -332,28 +332,28 @@ Baselines: PRM (with various samplers), LazyPRM, RRT, RRT-connect, EST.
   </tr>
 
   <tr id="exp1" align="center">
-    <td><img src="/resources/experiment/exp_3_motion.png" alt="exp_1_motion" width="300"/></td>
-    <td><img src="/resources/experiment/exp_3_rviz.png" alt="exp_1_rivz" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_3_motion.png" alt="exp_1_motion" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_3_rviz.png" alt="exp_1_rivz" width="300"/></td>
   </tr>
 
   <tr id="exp2" style="display:none" align="center">
-    <td><img src="/resources/experiment/exp_7_motion.png" alt="exp_2_motion" width="300"/></td>
-    <td><img src="/resources/experiment/exp_7_rviz.png" alt="exp_2_rivz" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_7_motion.png" alt="exp_2_motion" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_7_rviz.png" alt="exp_2_rivz" width="300"/></td>
   </tr>
 
   <tr id="exp3" style="display:none" align="center">
-    <td><img src="/resources/experiment/exp_9_motion.png" alt="exp_3_motion" width="300"/></td>
-    <td><img src="/resources/experiment/exp_9_rviz.png" alt="exp_3_rivz" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_9_motion.png" alt="exp_3_motion" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_9_rviz.png" alt="exp_3_rivz" width="300"/></td>
   </tr>
 
   <tr id="exp4" style="display:none" align="center">
-    <td><img src="/resources/experiment/exp_10_motion.png" alt="exp_4_motion" width="300"/></td>
-    <td><img src="/resources/experiment/exp_10_rviz.png" alt="exp_4_rivz" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_10_motion.png" alt="exp_4_motion" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_10_rviz.png" alt="exp_4_rivz" width="300"/></td>
   </tr>
   
   <tr id="exp5" style="display:none" align="center">
-    <td><img src="/resources/experiment/exp_12_motion.png" alt="exp_5_motion" width="300"/></td>
-    <td><img src="/resources/experiment/exp_12_rviz.png" alt="exp_5_rivz" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_12_motion.png" alt="exp_5_motion" width="300"/></td>
+    <td><img src="{{site.baseurl}}/resources/experiment/exp_12_rviz.png" alt="exp_5_rivz" width="300"/></td>
   </tr>
   
 </table>

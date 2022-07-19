@@ -4,6 +4,7 @@ description:
   Project page for "Efficient Path Planning in Narrow Passages for Robots with Ellipsoidal Components". A path planning paradigm based on closed-form characterization of free space.
 github_username: ruansp
 theme: jekyll-theme-cayman
+baseurl: /hrm-planning-page
 defaults:
   -
     scope:
