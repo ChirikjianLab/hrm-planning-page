@@ -8,13 +8,13 @@
 
 <small><sup>4</sup> Motional Inc., Pittsburgh, PA, USA</small>
 
-Accepted to __IEEE Transactions on Robotics (T-RO)__
+Published in __IEEE Transactions on Robotics (T-RO)__
 
 ## Introduction
 ![My photo]({{site.baseurl}}/resources/demo.png "My photo"){:style="float: left;margin-right: 7px;margin-top: 7px;" height="40%" width="40%"} Path planning has long been one of the major research areas in robotics, with PRM and RRT being two of the most effective classes of planners. Though generally very efficient, these sampling-based planners can become computationally expensive in the important case of "narrow passages". This paper develops a path planning paradigm specifically formulated for narrow passage problems. The core is based on planning for rigid-body robots encapsulated by unions of ellipsoids. Each environmental feature is represented geometrically using a strictly convex body with a C<sup>1</sup> boundary (e.g., superquadric). The main benefit of doing this is that configuration-space obstacles can be parameterized explicitly in closed form, thereby allowing prior knowledge to be used to avoid sampling infeasible configurations. Then, by characterizing a tight volume bound for multiple ellipsoids, robot transitions involving rotations are guaranteed to be collision-free without needing to perform traditional collision detection. Furthermore, by combining with a stochastic sampling strategy, the proposed planning framework can be extended to solving higher dimensional problems in which the robot has a moving base and articulated appendages. Benchmark results show that the proposed framework often outperforms the sampling-based planners in terms of computational time and success rate in finding a path through narrow corridors for both single-body robots and those with higher dimensional configuration spaces. Physical experiments using the proposed framework are further demonstrated on a humanoid robot that walks in several cluttered environments with narrow passages.
 
 ## Links
-- Paper: T-RO (Available soon!), [Arxiv](https://arxiv.org/abs/2104.04658){:target="_blank"}
+- Paper: [T-RO](https://ieeexplore.ieee.org/document/9841604), [Arxiv](https://arxiv.org/abs/2104.04658){:target="_blank"}
 - Code (Available soon!):
   - [Source]()
   - [API documentation]()
@@ -398,4 +398,4 @@ Baselines: PRM (with various samplers), LazyPRM, RRT, RRT-connect, EST.
 </script>
 
 ## Supplementary Video
-(Available soon!)
+<iframe width="640" height="340" src="https://youtu.be/dpAim6Fq3bo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
