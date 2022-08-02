@@ -398,4 +398,4 @@ Baselines: PRM (with various samplers), LazyPRM, RRT, RRT-connect, EST.
 </script>
 
 ## Supplementary Video
-<iframe width="640" height="340" src="https://youtu.be/dpAim6Fq3bo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="340" src="https://www.youtube.com/embed/dpAim6Fq3bo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
