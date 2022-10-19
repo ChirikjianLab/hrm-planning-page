@@ -24,35 +24,44 @@
 */
 var NAVTREE =
 [
-  [ "Highway RoadMap", "index.html", [
+  [ "hrm", "index.html", [
     [ "Documentation", "index.html", [
-      [ "Description", "index.html#autotoc_md1", null ],
-      [ "Dependencies", "index.html#autotoc_md2", null ],
-      [ "Compiling Instructions", "index.html#autotoc_md3", [
-        [ "On Local Host", "index.html#autotoc_md4", null ],
-        [ "On Docker (Recommended)", "index.html#autotoc_md5", null ]
+      [ "Description", "index.html#autotoc_md4", null ],
+      [ "Dependencies", "index.html#autotoc_md5", null ],
+      [ "Compiling Instructions", "index.html#autotoc_md6", [
+        [ "Authors", "index.html#autotoc_md1", null ],
+        [ "Useful links", "index.html#autotoc_md2", null ],
+        [ "Associate paper", "index.html#autotoc_md3", null ],
+        [ "On Local Host", "index.html#autotoc_md7", null ],
+        [ "On Docker (Recommended)", "index.html#autotoc_md8", null ]
       ] ],
-      [ "Testing Instructions", "index.html#autotoc_md6", [
-        [ "Generate configuration files", "index.html#autotoc_md7", null ],
-        [ "Running unit tests", "index.html#autotoc_md8", null ],
-        [ "Benchmarks", "index.html#autotoc_md9", null ],
-        [ "Visualizations", "index.html#autotoc_md10", null ]
+      [ "Installation and linking the library in another project", "index.html#autotoc_md9", [
+        [ "Installation", "index.html#autotoc_md10", null ],
+        [ "Linking in another package", "index.html#autotoc_md11", null ]
       ] ],
-      [ "Status", "index.html#autotoc_md11", [
-        [ "Highway RoadMap planner", "index.html#autotoc_md12", null ],
-        [ "OMPL sampled-based planners", "index.html#autotoc_md13", null ],
-        [ "Benchmark in different scenerios", "index.html#autotoc_md14", null ],
-        [ "Demonstration using real robot in a lab environment", "index.html#autotoc_md15", null ]
+      [ "Testing Instructions", "index.html#autotoc_md12", [
+        [ "Generate configuration files", "index.html#autotoc_md13", null ],
+        [ "Demonstration scripts", "index.html#autotoc_md14", null ],
+        [ "Running unit tests", "index.html#autotoc_md15", null ],
+        [ "Benchmarks", "index.html#autotoc_md16", null ],
+        [ "Visualizations", "index.html#autotoc_md17", null ]
       ] ],
-      [ "Related Papers", "index.html#autotoc_md16", null ]
+      [ "Features", "index.html#autotoc_md18", [
+        [ "Highway RoadMap planner", "index.html#autotoc_md19", null ],
+        [ "OMPL sampled-based planners", "index.html#autotoc_md20", null ],
+        [ "Available robot types", "index.html#autotoc_md21", null ],
+        [ "Available planning scene environments", "index.html#autotoc_md22", null ],
+        [ "Demonstration using real robot in a lab environment", "index.html#autotoc_md23", null ]
+      ] ],
+      [ "Other Related Papers", "index.html#autotoc_md24", null ]
     ] ],
-    [ "urdf-to-kdl", "d7/d70/md__home_ruan_public_repo_ws_hrm_src_util_external_kdl_parser_README.html", null ],
-    [ "HighwayRoadMap.resources", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html", [
-      [ "Folder structure", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md21", null ],
-      [ "Name conventions", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md22", [
-        [ "Robot shape", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md23", null ],
-        [ "Environmental features", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md24", null ],
-        [ "Planning settings", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md25", null ]
+    [ "urdf-to-kdl", "d3/d9f/md__home_ruan_research_ws_hrm_src_util_external_kdl_parser_README.html", null ],
+    [ "HighwayRoadMap.resources", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html", [
+      [ "Folder structure", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md29", null ],
+      [ "Name conventions", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md30", [
+        [ "Robot shape", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md31", null ],
+        [ "Environmental features", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md32", null ],
+        [ "Planning settings", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md33", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -74,8 +83,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d4/dd6/classhrm_1_1FreeSpace3D.html",
-"index.html#autotoc_md9"
+"d4/d6f/structhrm_1_1BoundaryMesh.html#ac0e16f93a84fe3a4df8c1a73735f7ac2",
+"index.html#autotoc_md23"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

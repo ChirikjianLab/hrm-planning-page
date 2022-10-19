@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Highway RoadMap: Documentation</title>
+<title>hrm: Documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Highway RoadMap
+   <div id="projectname">hrm<span id="projectnumber">&#160;v0.1.0</span>
    </div>
    <div id="projectbrief">Highway RoadMap (HRM) planning framework using closed-form Minkowski sums for robots with ellipsoidal components</div>
   </td>
@@ -86,167 +86,230 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Documentation </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_readme"></a>A paradigm for robot motion planning based on parameterizations of the free space</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Description</h1>
-<p >We develop a motion planning paradigm based on the closed-form Minkowski sum and difference between ellipsoid and general obstacle (bounded as a convex differentiable surface, i.e. superquadrics). This repository is the C++ implementation of algorithms and benchmarks. The algorithms includes: Highway RoadMap (HRM) for both SE(2) and SE(3) rigid body planning problems, Hybrid Probabilistic Highway RoadMap (HP-HRM) for articulated body planning problems and Closed-Form Collision-Free ConFiguration (CF3) sampler for sampling-based planners. The algorithms have been compared with sampled-based planners from OMPL. The benchmark results show that our proposed methods outperform the sample-based planners (i.e. PRM, RRT, RRT-Connect, etc) especially in the narrow-passage problems.</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Dependencies</h1>
+<div class="textblock"><p ><a class="anchor" id="md_readme"></a>The <b>Highway RoadMap (HRM)</b> paradigm for robot motion planning based on parameterizations of the free space. This repository contains C++ implementation of algorithms and benchmarks for our paper in <b>IEEE Transactions on Robotics (T-RO)</b>.</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Authors</h2>
+<p ><a href="https://ruansp.github.io/">Sipu Ruan</a>, Karen L. Poblete, Hongtao Wu, Qianli Ma and <a href="https://cde.nus.edu.sg/me/staff/chirikjian-gregory-s/">Gregory S. Chirikjian</a></p>
 <ul>
-<li><a href="https://ompl.kavrakilab.org/installation.html">OMPL</a> (version &gt;= 1.5.0): Open Motion Planning Library for sample-based planners</li>
-<li><a href="https://github.com/flexible-collision-library/fcl">FCL</a> (version = 0.6.0): Flexible Collision Library for collision detection</li>
+<li>Repository maintainers: Sipu Ruan, Qianli Ma</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Useful links</h2>
+<ul>
+<li>Paper: <a href="https://ieeexplore.ieee.org/document/9841604">Link to T-RO</a></li>
+<li>Project page: <a href="https://chirikjianlab.github.io/hrm-planning-page/">https://chirikjianlab.github.io/hrm-planning-page/</a></li>
+<li>API documentation:</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Associate paper</h2>
+<ul>
+<li>Ruan, S., Poblete, K.L., Wu, H., Ma, Q. and Chirikjian, G.S., 2022. Efficient Path Planning in Narrow Passages for Robots With Ellipsoidal Components. IEEE Transactions on Robotics. doi: 10.1109/TRO.2022.3187818</li>
+<li>BibTex <div class="fragment"><div class="line">@article{ruan2022efficient,</div>
+<div class="line">  title={Efficient Path Planning in Narrow Passages for Robots With Ellipsoidal Components},</div>
+<div class="line">  author={Ruan, Sipu and Poblete, Karen L and Wu, Hongtao and Ma, Qianli and Chirikjian, Gregory S},</div>
+<div class="line">  journal={IEEE Transactions on Robotics},</div>
+<div class="line">  year={2022},</div>
+<div class="line">  publisher={IEEE}</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Description</h1>
+<p >We develop a motion planning paradigm based on the closed-form Minkowski sum and difference between ellipsoid and general obstacle (bounded as a convex differentiable surface, i.e. superquadrics). The algorithms includes: Highway RoadMap (HRM) for both SE(2) and SE(3) rigid body planning problems and a hybrid Probabilistic Highway RoadMap (Prob-HRM) for articulated body planning problems. The algorithms have been compared with sampled-based planners from OMPL. The benchmark results show that our proposed methods outperform the sample-based planners (i.e. PRM, RRT, RRT-Connect, etc) especially in the narrow-passage problems.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Dependencies</h1>
+<p >We provide an installation script for dependencies: <a href="/script/install-dependencies-on-localhost.sh"><code>install-dependencies-on-localhost.sh</code></a>. Exectuting it will automatically install all the following required dependencies:</p><ul>
+<li><a href="https://ompl.kavrakilab.org/installation.html">OMPL</a> (version &gt;= 1.5.0): Open Motion Planning Library for sampling-based planners</li>
+<li><a href="https://github.com/flexible-collision-library/fcl">FCL</a> (version &gt;= 0.6.0): Flexible Collision Library for collision detection</li>
 <li><a href="https://www.cgal.org/">CGAL</a> (version &gt;= 5.2.1): Mesh generation as a pre-process</li>
 <li><a href="https://orocos.org/wiki/orocos/kdl-wiki.html">KDL</a>: Kinematics and Dynamics Library for operations on kinematic chains</li>
 <li><a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a> (version &gt;= 3.3.0)</li>
-<li><a href="https://www.boost.org/">Boost</a> (version = 1.71.0)</li>
-<li><a href="https://github.com/google/googletest">google-test</a> (version &gt;= 1.10.x)</li>
+<li><a href="https://www.boost.org/">Boost</a> (version &gt;= 1.71.0)</li>
+<li><a href="https://github.com/google/googletest">google-test</a> (version &gt;= 1.10)</li>
 <li>(Optional) <a href="http://wiki.ros.org/kdl_parser">KDL-parser</a>: Parser from URDF to KDL</li>
-<li>[cmake-format] (version &gt;= 0.4.5) <div class="fragment"><div class="line">sudo pip3 install cmake-format==0.4.5</div>
-</div><!-- fragment --></li>
-<li>[clang-format] <div class="fragment"><div class="line">sudo apt install clang</div>
-</div><!-- fragment --></li>
-<li>[Cppcheck] <div class="fragment"><div class="line">sudo apt install cppcheck</div>
-</div><!-- fragment --></li>
 </ul>
-<p ><b>Note</b>:</p><ul>
-<li>We provide an installation script for dependencies: <code>/script/install-dependencies.sh</code>. Exectuting it will automatically install all the required dependencies.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Compiling Instructions</h1>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 On Local Host</h2>
 <p >This is a standard CMake project, so compiling using the standard way of building is fine, i.e. from the root folder do the following commands: </p><div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
 <div class="line">cmake ../</div>
 <div class="line">make</div>
-</div><!-- fragment --><p> The compilations are tested on Ubuntu 16.04, 18.04 and 20.04 systems using CMake (&gt;= 3.5).</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+</div><!-- fragment --><p> <b>Note</b>:</p><ul>
+<li>The compilation is tested on Ubuntu 20.04/22.04 systems using CMake (&gt;= 3.10)</li>
+<li>If you have installed OMPL from ROS, please make sure that its version is higher than 1.5.0, otherwise some features used in benchmark files might not be available. To link correct OMPL, you might need to add prefix when compiling, i.e. <div class="fragment"><div class="line">cmake ../ -DOMPL_INCLUDE_DIRS=/your/ompl/include/dir</div>
+</div><!-- fragment --></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
 On Docker (Recommended)</h2>
 <div class="fragment"><div class="line"># Pull directory onto your localhost</div>
 <div class="line">cd $HOME &amp;&amp; mkdir HighwayRoadMap_WS</div>
-<div class="line">cd HighwayRoadMap_WS &amp;&amp; git clone git@github.com:ruansp/HighwayRoadMap.git</div>
+<div class="line">cd HighwayRoadMap_WS &amp;&amp; git clone git@github.com:ruansp/hrm.git</div>
 <div class="line"> </div>
 <div class="line"># Fetch docker image from remote and launch it locally (No need to build the image locally)</div>
-<div class="line">./HighwayRoadMap/script/start-doker.sh</div>
+<div class="line">./hrm/script/start-docker.sh</div>
 <div class="line"> </div>
 <div class="line"># Build the project inside the docker container</div>
 <div class="line">cd HighwayRoadMap_WS</div>
 <div class="line">mkdir build</div>
 <div class="line">cd build</div>
-<div class="line">cmake -G Ninja ../HighwayRoadMap</div>
-<div class="line">ninja -j 9</div>
-</div><!-- fragment --><p ><b>Note</b>:</p><ul>
-<li>If you have installed OMPL from ROS, please make sure that its version is higher than 1.5.0, otherwise some features used in benchmark files might not be available. To link correct OMPL, you might need to add prefix when compiling, i.e. <code>cmake ../ -DOMPL_PREFIX=/your/ompl/include/dir</code>.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<div class="line">cmake -G Ninja ../hrm</div>
+<div class="line">ninja</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+Installation and linking the library in another project</h1>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Installation</h2>
+<p >After building: </p><div class="fragment"><div class="line">[sudo] make install</div>
+</div><!-- fragment --><p> By default, the library will be install in <code>/usr/local/</code></p>
+<p >To uninstall: </p><div class="fragment"><div class="line">[sudo] make uninstall</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md11"></a>
+Linking in another package</h2>
+<p >In your <code>CMakeLists.txt</code>, add a line: </p><div class="fragment"><div class="line">find_package(hrm REQUIRED)</div>
+</div><!-- fragment --><p >To link the library to an executable (e.g., a demonstration for HRM planner in the 3D case): </p><div class="fragment"><div class="line">add_executable(demo_hrm_3d demo_hrm_3d.cpp)</div>
+<div class="line">target_link_libraries(demo_hrm_3d</div>
+<div class="line">                      hrm::HRM3D</div>
+<div class="line">                      hrm::TestUtil)</div>
+</div><!-- fragment --><p> Other linking library choices: <code>hrm::Geometry</code>, <code>hrm::DataStructure</code>, <code>hrm::HighwayRoadMap</code>, <code>hrm::HRM2D</code>, <code>hrm::OMPLPlanner</code>, <code>hrm::Util</code></p>
+<h1><a class="anchor" id="autotoc_md12"></a>
 Testing Instructions</h1>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Generate configuration files</h2>
-<p >Configuration files for environment and robot when testing the C++ scripts are all stored in <code>/config</code> folder, including (3D cases as an example) <code>arena_config_3D.csv</code>, <code>obs_config_3D.csv</code>. <code>robot_config_3D.csv</code> and <code>end_points_3D.csv</code>. Configuration files for demostrations are provided in <code>/config/demo/</code> folder. In the repository, there are pre-defined configurations in these files, stored in <code>/resources/</code> folder. To customize different robot or environment configurations, simply run the Matlab scripts <code>/matlab/tests/planning_config_3D.m</code>, and change different parameters that defines the geometric shapes of the obstacles and robots.</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
-Running unit tests</h2>
-<p >Testing files are located in <code>/test</code> folder:</p><ul>
-<li>2D HRM planner for single-body: <code>TestHRM2D.cpp</code></li>
-<li>3D HRM planner for multi-rigid-body: <code>TestHRM3D.cpp</code></li>
-<li>3D Prob-HRM planner for articulated-body: <code>TestProbHRM3D.cpp</code></li>
-<li>Geometric subroutines: <code>TestGeometry.cpp</code></li>
+<p >Configuration files for environment and robot when testing the C++ scripts are all stored in <code>/config</code> folder, including (3D cases as an example) <code>arena_config_3D.csv</code>, <code>obs_config_3D.csv</code>. <code>robot_config_3D.csv</code> and <code>end_points_3D.csv</code>.</p>
+<p >In the repository, there are pre-defined configurations in these files, stored in <a href="/resources"><code>/resources/</code></a> folder. There are 2 ways to customize different robot or environment configurations:</p><ul>
+<li>Run MATLAB scripts <a href="/demo/matlab/planning_config_3D.m"><code>planning_config_3D.m</code></a>, and change different parameters that defines the geometric shapes of the obstacles and robots.</li>
+<li>Use C++ planning scene parser function defined <a href="/include/hrm/test/util/ParsePlanningSettings.h#L197">here</a>, i.e., <div class="fragment"><div class="line">hrm::parsePlanningConfig(&quot;superquadrics&quot;, &quot;cluttered&quot;, &quot;rabbit&quot;, &quot;3D&quot;);</div>
+</div><!-- fragment --></li>
 </ul>
-<p ><b>Command line arguments</b>: </p><div class="fragment"><div class="line">cd build/</div>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Demonstration scripts</h2>
+<p >Demonstrations scripts are located in <a href="/demo"><code>/demo</code></a> folder:</p><ul>
+<li><a href="/demo/DemoHRMRigidBodyPlanning3D.cpp"><code>DemoHRMRigidBodyPlanning3D.cpp</code></a></li>
+<li><a href="/demo/DemoProbHRMArticulatedBodyPlanning3D.cpp"><code>DemoProbHRMArticulatedBodyPlanning3D.cpp</code></a></li>
+<li><a href="/demo/DemoOMPLRigidBodyPlanning3D.cpp"><code>DemoOMPLRigidBodyPlanning3D.cpp</code></a></li>
+<li><a href="/demo/DemoOMPLArticulatedBodyPlanning3D.cpp"><code>DemoOMPLArticulatedBodyPlanning3D.cpp</code></a></li>
+</ul>
+<p >Detailed results will be stored in <code>/result/details</code> folder and can be visualized using either MATLAB or Python scripts (See <a href="README.md#visualizations">here</a> for running instructions).</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Running unit tests</h2>
+<div class="fragment"><div class="line">cd build/</div>
 <div class="line">ctest</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><p >Testing files are located in <a href="/test"><code>/test</code></a> folder:</p><ul>
+<li>Geometric subroutines: <a href="/test/TestGeometry.cpp"><code>TestGeometry.cpp</code></a></li>
+<li>2D HRM planner for a single elliptical body: <a href="/test/TestHRM2D.cpp"><code>TestHRM2D.cpp</code></a></li>
+<li>3D HRM planner for rigid body: <a href="/test/TestHRM3D.cpp"><code>TestHRM3D.cpp</code></a></li>
+<li>3D HRM planner for rigid body with ablated C-slice connections: <a href="/test/TestHRM3DAblation.cpp"><code>TestHRM3DAblation.cpp</code></a></li>
+<li>3D Prob-HRM planner for articulated body: <a href="/test/TestProbHRM3D.cpp"><code>TestProbHRM3D.cpp</code></a></li>
+<li>3D OMPL planners for rigid body: <a href="/test/TestOMPL3D.cpp"><code>TestOMPL3D.cpp</code></a></li>
+<li>3D OMPL planners for articulated body: <a href="/test/TestOMPL3DArticulated.cpp"><code>TestOMPL3DArticulated.cpp</code></a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md16"></a>
 Benchmarks</h2>
-<p >Benchmark files are stored in <code>/test/benchmark/</code> folder:</p><ul>
-<li>2D HRM planner for single-body: <code>BenchHRM2D.cpp</code> <div class="fragment"><div class="line"># Parameters: --Num of trials --Num of layers --Num of sweep lines --Configuration file prefix</div>
-<div class="line">./BenchHRM2D 1 20 30 ${SOURCE_DIR}/config/</div>
+<p >Benchmark files are stored in <a href="/test/benchmark"><code>/test/benchmark/</code></a> folder:</p><ul>
+<li>2D HRM planner for a single body: <a href="/test/benchmark/BenchHRM2D.cpp"><code>BenchHRM2D.cpp</code></a> <div class="fragment"><div class="line"># Parameters: --Map type -- Robot type --Num of trials --Num of slices --[optional] Num of sweep lines</div>
+<div class="line">./BenchHRM2D sparse rabbit 50 20 30</div>
 </div><!-- fragment --></li>
-<li>3D HRM planner for multi-body: <code>BenchHRM3D.cpp</code> <div class="fragment"><div class="line"># Parameters: --Num of trials --Num of layers --Num of sweep lines (x-direction) --Num of sweep lines (y-direction) --Max planning time --Configuration file prefix --Pre-defined quaternions file prefix (if no, enter 0 or leave blank)</div>
-<div class="line">./BenchHRM3D 1 60 6 3 60.0 ${SOURCE_DIR}/config/demo/ ${SOURCE_DIR}/resources/SO3_sequence/q_icosahedron</div>
+<li>3D HRM planner for rigid body: <a href="/test/benchmark/BenchHRM3D.cpp"><code>BenchHRM3D.cpp</code></a> <div class="fragment"><div class="line"># Parameters: --Map type --Robot type --Num of trials --Max planning time --Num of slices --Method for pre-defined SO(3) samples --[optional] Num of sweep lines (x-direction) --[optional] Num of sweep lines (y-direction)</div>
+<div class="line">./BenchHRM3D sparse rabbit 50 60.0 60 icosahedron 6 3</div>
 </div><!-- fragment --></li>
-<li>3D HRM planner for multi-body (ablated version, without "bridge C-slice" process): <code>BenchHRM3DAblation.cpp</code> <div class="fragment"><div class="line"># Parameters: --Num of trials --Num of layers --Num of sweep lines (x-direction) --Num of sweep lines (y-direction) --Max planning time --Configuration file prefix --Pre-defined quaternions file prefix (if no, enter 0 or leave blank)</div>
-<div class="line">./BenchHRM3DAblation 1 60 6 3 60.0 ${SOURCE_DIR}/config/demo/ ${SOURCE_DIR}/resources/SO3_sequence/q_icosahedron</div>
+<li>3D HRM planner for rigid body (ablated version, without "bridge C-slice" process): <a href="/test/benchmark/BenchHRM3DAblation.cpp"><code>BenchHRM3DAblation.cpp</code></a> <div class="fragment"><div class="line"># Parameters: --Map type --Robot type --Num of trials --Max planning time --Num of slices --Method for pre-defined SO(3) samples --[optional] Num of sweep lines (x-direction) --[optional] Num of sweep lines (y-direction)</div>
+<div class="line">./BenchHRM3DAblation sparse rabbit 50 60.0 60 icosahedron 6 3</div>
 </div><!-- fragment --></li>
-<li>3D Prob-HRM planner for articulated-body: <code>BenchProbHRM3D.cpp</code> <div class="fragment"><div class="line"># Parameters: --Num of trials --Num of trials --robot name --Num of sweep lines (x-direction) --Num of sweep lines (y-direction) --Max planning time (in seconds, default: 60.0s) --Configuration file prefix --URDF file prefix</div>
-<div class="line">./BenchHRM3D 1 snake 6 3 60.0 ${SOURCE_DIR}/config/demo/ ${SOURCE_DIR}/</div>
+<li>3D Prob-HRM planner for articulated body: <a href="/test/benchmark/BenchProbHRM3D.cpp"><code>BenchProbHRM3D.cpp</code></a> <div class="fragment"><div class="line"># Parameters: --Map type --Robot type --Num of trials --Max planning time (in seconds) --[optional] Num of sweep lines (x-direction) --[optional] Num of weep lines (y-direction)&quot;</div>
+<div class="line">./BenchProbHRM3D sparse snake 50 60.0 6 3</div>
 </div><!-- fragment --></li>
-<li>3D Prob-HRM planner for articulated-body (ablated version, without "bridge C-slice" process): <code>BenchProbHRM3DAblation.cpp</code> <div class="fragment"><div class="line"># Parameters: --Num of trials --Num of trials --robot name --Num of sweep lines (x-direction) --Num of sweep lines (y-direction) --Max planning time (in seconds, default: 60.0s) --Configuration file prefix --URDF file prefix</div>
-<div class="line">./BenchHRM3DAblation 1 snake 6 3 60.0 ${SOURCE_DIR}/config/demo/ ${SOURCE_DIR}/</div>
+<li>3D Prob-HRM planner for articulated body (ablated version, without "bridge C-slice" process): <a href="/test/benchmark/BenchProbHRM3DAblation.cpp"><code>BenchProbHRM3DAblation.cpp</code></a> <div class="fragment"><div class="line"># Parameters: --Map type --Robot type --Num of trials --Max planning time (in seconds) --[optional] Num of sweep lines (x-direction) --[optional] Num of weep lines (y-direction)&quot;</div>
+<div class="line">./BenchProbHRM3DAblation sparse snake 50 60.0 6 3</div>
 </div><!-- fragment --></li>
-<li>3D OMPL planner for rigid-body: <code>BenchOMPL3D.cpp</code> <div class="fragment"><div class="line"># Parameters: --Num of trials --Planner start ID --Planner end ID --Sampler start ID --Sampler end ID --Max planning time (in seconds, default: 60.0s) --Configuration file prefix</div>
-<div class="line">./BenchOMPL3D 1 0 5 0 4 60.0 ${SOURCE_DIR}/config/demo/</div>
+<li>3D OMPL planner for rigid body: <a href="/test/benchmark/BenchOMPL3D.cpp"><code>BenchOMPL3D.cpp</code></a> <div class="fragment"><div class="line"># Parameters: --Map type --Robot type --Num of trials --Planner start ID --Planner end ID --Sampler start ID --Sampler end ID --Max planning time (in seconds)</div>
+<div class="line">./BenchOMPL3D sparse rabbit 50 0 5 0 4 60.0</div>
 </div><!-- fragment --></li>
-<li>3D OMPL planner for articulated-body: <code>BenchOMPL3DArticulated.cpp</code> <div class="fragment"><div class="line"># Parameters: --Num of trials --Planner start ID --Planner end ID --Sampler start ID --Sampler end ID --Max planning time (in seconds, default: 60.0s) --Configuration file prefix</div>
-<div class="line">./BenchOMPL3D 1 0 5 0 4 snake 60.0 ${SOURCE_DIR}/config/demo/ ${SOURCE_DIR}/</div>
+<li>3D OMPL planner for articulated body: <a href="/test/benchmark/BenchOMPL3DArticulated.cpp"><code>BenchOMPL3DArticulated.cpp</code></a> <div class="fragment"><div class="line"># Parameters: --Map type --Robot type --Num of trials --Planner start ID --Planner end ID --Sampler start ID --Sampler end ID --Max planning time (in seconds)</div>
+<div class="line">./BenchOMPL3DArticulated sparse snake 50 0 5 0 4 60.0</div>
 </div><!-- fragment --></li>
 </ul>
 <p ><b>Note</b>:</p><ul>
-<li>The configuration file path prefix in the examples is for demonstration, and you could specify the folder path that stores the configuration files as your preference.</li>
-<li>The SO(3) samples can be specified based on the generating methods. In the resources folder, we provide two methods: (1) "q_icosahedron_60": 60 samples from icosahedral symmetry group (as described in paper); (2) "q_hopf_": different numbers of samples using Hopf fibration.</li>
-<li>The URDF file prefix is set by default as the source directory. The script will search under relative path: "${SOURCE_DIR}/resources/3D/urdf/${robot_name}.urdf". If you have your own robot URDF file, please put into the correct folder or setup correct relative path.</li>
+<li>The SO(3) samples can be specified based on the generating methods. In the resources folder, we provide two methods: (1) "icosahedron": samples from icosahedral symmetry group (as described in paper); (2) "hopf": samples using Hopf fibration.</li>
+<li>The URDF file is only available for articulated-body planning problems, with the robot type being "snake" or "tree".</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Visualizations</h2>
-<p >After running test or benchmark files, parameters for visualization will be generated in the "/bin" folder. Visualization scripts are all in Matlab:</p><ul>
-<li>Plot 2D results: <code>/matlab/tests/plot_results_2D.m</code></li>
-<li>Plot 2D Highway RoadMap graph: <code>/matlab/tests/plot_results_graph_2D.m</code></li>
-<li>Plot 3D results: <code>/matlab/tests/plot_results_highway_3D.m</code></li>
-<li>Plot 3D OMPL planners results: <code>/matlab/tests/plot_results_ompl_3D.m</code></li>
+<p >After running demo or benchmark scripts, results for visualization will be generated in the <code>/result</code> folder. Visualization scripts are in both MATLAB and Python:</p>
+<p >For MATLAB:</p><ul>
+<li>Plot results from HRM planner (2D case): <a href="/demo/matlab/plot_results_hrm_2D.m"><code>plot_results_hrm_2D.m</code></a></li>
+<li>Plot graph from HRM (2D case): <a href="/demo/matlab/plot_results_graph_2D.m"><code>plot_results_graph_2D.m</code></a></li>
+<li>Plot results from HRM/Prob-HRM planners (3D case): <a href="/demo/matlab/plot_results_hrm_3D.m"><code>plot_results_hrm_3D.m</code></a></li>
+<li>Plot graph from HRM (3D case): <a href="/demo/matlab/plot_results_graph_3D.m"><code>plot_results_graph_3D.m</code></a></li>
+<li>Plot results from OMPL planners (3D case): <a href="/demo/matlab/plot_results_ompl_3D.m"><code>plot_results_ompl_3D.m</code></a></li>
+<li>Generate movie for results from HRM planner (3D case): <a href="/demo/matlab/movie_results_hrm_3D.m"><code>movie_results_hrm_3D.m</code></a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md11"></a>
-Status</h1>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<p >For Python (Please follow <a href="/demo/python/requirements.txt"><code>/demo/python/requirements.txt</code></a> for dependencies installation):</p><ul>
+<li>Plot 3D HRM/Prob-HRM results and graph: <a href="/demo/python/plot_results_hrm_3D.py"><code>plot_results_hrm_3D.py</code></a></li>
+<li>Plot 3D OMPL planners results and data structure: <a href="/demo/python/plot_results_ompl_3D.py"><code>plot_results_ompl_3D.py</code></a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md18"></a>
+Features</h1>
+<h2><a class="anchor" id="autotoc_md19"></a>
 Highway RoadMap planner</h2>
-<ol type="1">
-<li>SE(2) single rigid body cases:</li>
-</ol>
 <ul>
-<li>Fixed number of layers and sweep lines.</li>
-<li>Layer connections using KC (<code>src/planners/HighwayRoadMap.cpp</code>) and TFE (<code>src/planners/HighwayRoadMap2d.cpp</code>).</li>
+<li>SE(2) single rigid body:<ul>
+<li>C-slice connections using Tightly-Fitted Ellipsoid (TFE) <a href="/include/hrm/planners/HRM2D.h"><code>HRM2D</code></a> and Kinematics of Containment (KC) <a href="/include/hrm/planners/HRM2DKC.h"><code>HRM2DKC</code></a>.</li>
 </ul>
-<ol type="1">
-<li>SE(3) single/multi rigid body cases:</li>
-</ol>
-<ul>
-<li>Single body (<code>src/planners/HighwayRoadMap3d.cpp</code>): fixed number of layers and sweep lines.</li>
-<li>Multi body: fixed (<code>src/planners/Hrm3DMultiBody.cpp</code>) / adaptive (<code>src/planners/Hrm3DMultiBodyAdaptive.cpp</code>) number of layers, fixed sweep lines.</li>
-<li>Layer connections using TFE.</li>
+</li>
+<li>SE(3) rigid body:<ul>
+<li>C-slice connections using TFE <a href="/include/hrm/planners/HRM3D.h"><code>HRM3D</code></a></li>
+<li>Ablated version for C-slice connections <a href="/include/hrm/planners/HRM3DAblation.h"><code>HRM3DAblication</code></a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md13"></a>
+</li>
+<li>3D articulated body:<ul>
+<li>Probabilistic HighwayRoadMap <a href="/include/hrm/planners/ProbHRM3D.h"><code>ProbHRM3D</code></a></li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md20"></a>
 OMPL sampled-based planners</h2>
-<ol type="1">
-<li>SE(3) single/multi rigid body:</li>
-</ol>
 <ul>
-<li>Benchmark: <code>/test/benchmark/BenchOMPL3D.cpp</code></li>
+<li>SE(2) rigid body: <a href="/include/hrm/planners/ompl_interface/OMPL2D.h"><code>OMPL2D</code></a></li>
+<li>SE(3) rigid body: <a href="/include/hrm/planners/ompl_interface/OMPL3D.h"><code>OMPL3D</code></a></li>
+<li>3D articulated body: <a href="/include/hrm/planners/ompl_interface/OMPL3DArticulated.h"><code>OMPL3DArticulated</code></a></li>
 </ul>
-<ol type="1">
-<li>Articulated body:</li>
-</ol>
+<h2><a class="anchor" id="autotoc_md21"></a>
+Available robot types</h2>
 <ul>
-<li>Benchmark: <code>/test/benchmark/BenchOMPL3DArticulated.cpp</code></li>
+<li>Rigid body: Rabbit, Chair</li>
+<li>Articulated body: Snake, Tree</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md14"></a>
-Benchmark in different scenerios</h2>
-<ul>
-<li>Sparse map</li>
-<li>Cluttered map</li>
-<li>Maze map</li>
-<li>Home environment map</li>
-<li>Narrow map</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md22"></a>
+Available planning scene environments</h2>
+<p >Sparse, Cluttered, Maze, Home, Narrow</p>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Demonstration using real robot in a lab environment</h2>
-<ol type="1">
+<ul>
 <li>Verified the algorithm in real robot, i.e. project the NAO humanoid robot to the plane, and plan a trajectory.</li>
-</ol>
-<h1><a class="anchor" id="autotoc_md16"></a>
-Related Papers</h1>
-<p >"Ruan, S., Ma, Q., Poblete, K.L., Yan, Y. and Chirikjian G.S., 2018, December. Path Planning for Ellipsoidal Robots and General Obstacles via Closed-Form Characterization of Minkowski Operations. WAFR 2018."</p>
-<p >"Yan, Y., Ma, Q. and Chirikjian, G.S., 2016, October. Path Planning Based on Closed-Form Characterization of Collision-Free Configuration-Spaces for Ellipsoidal Bodies, Obstacles, and Environments. In Proc. Int. Workshop Robot Learn. Plan. (pp. 13-19)."</p>
-<p >"Yan, Y. and Chirikjian, G.S., 2015. Closed-form characterization of the Minkowski sum and difference of two ellipsoids. Geometriae Dedicata, 177(1), pp.103-128."</p>
-<p >"Ruan, S., Ding, J., Ma, Q. and Chirikjian, G.S., 2019. The Kinematics of Containment for N-Dimensional Ellipsoids. Journal of Mechanisms and Robotics, 11(4), p.041005."</p>
-<p >"Ruan, S., Ding, J. and Chirikjian, G.S., 2018. Lower Bounds of the Allowable Motions of One N-Dimensional Ellipsoid Contained in Another. ASME IDETC 2018."</p>
-<p >"Ma, Q. and Chirikjian, G.S., 2015, August. A Closed-Form Lower Bound on the Allowable Motion for an Ellipsoidal Body and Environment. ASME IDETC 2015."</p>
-<p >"Chirikjian, G.S. and Yan, Y., 2014. The Kinematics of Containment. In Advances in Robot Kinematics (pp. 355-364). Springer International Publishing." </p>
+</ul>
+<h1><a class="anchor" id="autotoc_md24"></a>
+Other Related Papers</h1>
+<ul>
+<li>Conference version:<ul>
+<li>"Ruan, S., Ma, Q., Poblete, K.L., Yan, Y. and Chirikjian G.S., 2018, December. Path Planning for Ellipsoidal Robots and General Obstacles via Closed-Form Characterization of Minkowski Operations. WAFR 2018."</li>
+</ul>
+</li>
+<li>Initial algorithmic framework for ellipsoidal robot planning in scenes with ellipsoidal obstacles:<ul>
+<li>"Yan, Y., Ma, Q. and Chirikjian, G.S., 2016, October. Path Planning Based on Closed-Form Characterization of Collision-Free Configuration-Spaces for Ellipsoidal Bodies, Obstacles, and Environments. In Proc. Int. Workshop Robot Learn. Plan. (pp. 13-19)."</li>
+</ul>
+</li>
+<li>Initial work on closed-form Minkowski sums and difference between two ellipsoids:<ul>
+<li>"Yan, Y. and Chirikjian, G.S., 2015. Closed-form characterization of the Minkowski sum and difference of two ellipsoids. Geometriae Dedicata, 177(1), pp.103-128."</li>
+</ul>
+</li>
+<li>Works on Kinematics of Containment (KC):<ul>
+<li>"Ruan, S., Ding, J., Ma, Q. and Chirikjian, G.S., 2019. The Kinematics of Containment for N-Dimensional Ellipsoids. Journal of Mechanisms and Robotics, 11(4), p.041005."</li>
+<li>"Ruan, S., Ding, J. and Chirikjian, G.S., 2018. Lower Bounds of the Allowable Motions of One N-Dimensional Ellipsoid Contained in Another. ASME IDETC 2018."</li>
+<li>"Ma, Q. and Chirikjian, G.S., 2015, August. A Closed-Form Lower Bound on the Allowable Motion for an Ellipsoidal Body and Environment. ASME IDETC 2015."</li>
+<li>"Chirikjian, G.S. and Yan, Y., 2014. The Kinematics of Containment. In Advances in Robot Kinematics (pp. 355-364). Springer International Publishing." </li>
+</ul>
+</li>
+</ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
