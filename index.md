@@ -15,9 +15,9 @@ Published in __IEEE Transactions on Robotics (T-RO)__
 
 ## Links
 - Paper: [T-RO](https://ieeexplore.ieee.org/document/9841604), [Arxiv](https://arxiv.org/abs/2104.04658){:target="_blank"}
-- Code (Available soon!):
-  - [Source code](https://www.github.com/ChirikjianLab/hrm/)
-  - API documentation: [v0.1.0, latest]({{site.baseurl}}/resources/doc/v0.1.0/index.html)
+- Code:
+  - Source code: [https://www.github.com/ChirikjianLab/hrm/](https://www.github.com/ChirikjianLab/hrm/)
+  - API documentation: [v1.0.0 (latest)]({{site.baseurl}}/resources/doc/v1.0.0/index.html)
 
 ## Benchmark experiments
 Baselines: PRM (with various samplers), LazyPRM, RRT, RRT-connect, EST.
