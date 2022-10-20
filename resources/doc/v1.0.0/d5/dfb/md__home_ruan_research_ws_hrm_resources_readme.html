@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('d5/dfb/md__home_ruan_research_ws_hrm_r
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p >Pre-defined robot configurations, environmental features, etc.</p>
-<h1><a class="anchor" id="autotoc_md30"></a>
+<h1><a class="anchor" id="autotoc_md33"></a>
 Folder structure</h1>
 <p >All configurations are stored in .csv files. Subfolders contain:</p><ul>
 <li><code>2D/</code> and <code>3D/</code>: store robot shape, map information and planning settings.</li>
@@ -109,23 +109,23 @@ Folder structure</h1>
 <div class="line">-- q_{sample_type}_{num_samples}.csv</div>
 <div class="line">mesh/</div>
 <div class="line">urdf/</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md34"></a>
 Name conventions</h1>
 <p >Important note: for 3D rotations in <code>3D/</code> folder, we use the <b>Axis-Angle</b> parameterization to as the storage convention; while in <code>SO3_sequence/</code> folder, the storage convention is <b>Unit-Quaternion (order: [x,y,z,w])</b>.</p>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 Robot shape</h2>
 <p >Each line includes all parameters to define an ellipsoid (ellipse in 2D): semi axis lengths, exponents (= 1), center in Cartesian coordinates, orientation. The first line defines the base links, and the rests define other links (positions and orientations are <b>all relative to the base link</b>).</p><ul>
 <li>2D: <code>2D/robot_{type}_2D.csv</code>, each line: semi_axis_a, semi_axis_b, epsilon = 1, center_x, center_y, rotation_angle</li>
 <li>3D: <code>3D/robot_{type}_3D.csv</code>, each line: semi_axis_a, semi_axis_b, semi_axis_c, epsilon_1 = 1, epsilon_2 = 1, center_x, center_y, center_z, rotation_axis_x, rotation_axis_y, rotation_axis_z, rotation_angle</li>
 </ul>
 <p ><code>{type}</code>: name of the robot (i.e. rabbit, S-shape, etc).</p>
-<h2><a class="anchor" id="autotoc_md33"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 Environmental features</h2>
 <p >Arena and obstacles are stored in different files. Each line includes all parameters to define a superquadric (superellipse in 2D): semi axis lengths, exponents, center in Cartesian coordinates, orientation.</p><ul>
 <li>2D: <code>2D/env_{ellipse/superellipse}_{map_type}_2D_{arena/obstacle}.csv</code>, each line: semi_axis_a, semi_axis_b, epsilon, center_x, center_y, rotation_angle</li>
 <li>3D: <code>3D/env_{ellipsoid/superquadrics}_{map_type}_3D_{arena/obstacle}.csv</code>, each line: semi_axis_a, semi_axis_b, semi_axis_c, epsilon_1, epsilon_2, center_x, center_y, center_z, rotation_axis_x, rotation_axis_y, rotation_axis_z, rotation_angle</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 Planning settings</h2>
 <p >Definition of start and end poses in the planning problem.</p><ul>
 <li>2D: <code>2D/setting_{ellipse/superellipse}_{map_type}_2D.csv</code>, each line: center_x, center_y, rotation_angle</li>

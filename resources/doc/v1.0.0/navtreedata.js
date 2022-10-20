@@ -27,42 +27,47 @@ var NAVTREE =
   [ "hrm", "index.html", [
     [ "Documentation", "index.html", [
       [ "Description", "index.html#autotoc_md4", null ],
-      [ "Dependencies", "index.html#autotoc_md5", null ],
-      [ "Compiling Instructions", "index.html#autotoc_md6", [
+      [ "Dependencies", "index.html#autotoc_md5", [
         [ "Authors", "index.html#autotoc_md1", null ],
         [ "Useful links", "index.html#autotoc_md2", null ],
         [ "Associate paper", "index.html#autotoc_md3", null ],
-        [ "On Local Host", "index.html#autotoc_md7", null ],
-        [ "On Docker (Recommended)", "index.html#autotoc_md8", null ],
-        [ "Install Python Dependencies through Python Virtual Environment on Localhost", "index.html#autotoc_md9", null ]
+        [ "Core C++ library", "index.html#autotoc_md6", null ],
+        [ "Visualization using Python", "index.html#autotoc_md7", null ]
       ] ],
-      [ "Installation and linking the library in another project", "index.html#autotoc_md10", [
-        [ "Installation", "index.html#autotoc_md11", null ],
-        [ "Linking in another package", "index.html#autotoc_md12", null ]
+      [ "Compiling Instructions", "index.html#autotoc_md8", [
+        [ "On Local Host", "index.html#autotoc_md9", null ],
+        [ "On Docker (Recommended)", "index.html#autotoc_md10", null ]
       ] ],
-      [ "Testing Instructions", "index.html#autotoc_md13", [
-        [ "Generate configuration files", "index.html#autotoc_md14", null ],
-        [ "Demonstration scripts", "index.html#autotoc_md15", null ],
-        [ "Running unit tests", "index.html#autotoc_md16", null ],
-        [ "Benchmarks", "index.html#autotoc_md17", null ],
-        [ "Visualizations", "index.html#autotoc_md18", null ]
+      [ "Installation and linking the library in another project", "index.html#autotoc_md11", [
+        [ "Installation", "index.html#autotoc_md12", null ],
+        [ "Linking in another package", "index.html#autotoc_md13", null ]
       ] ],
-      [ "Features", "index.html#autotoc_md19", [
-        [ "Highway RoadMap planner", "index.html#autotoc_md20", null ],
-        [ "OMPL sampled-based planners", "index.html#autotoc_md21", null ],
-        [ "Available robot types", "index.html#autotoc_md22", null ],
-        [ "Available planning scene environments", "index.html#autotoc_md23", null ],
-        [ "Demonstration using real robot in a lab environment", "index.html#autotoc_md24", null ]
+      [ "Testing Instructions", "index.html#autotoc_md14", [
+        [ "Generate configuration files", "index.html#autotoc_md15", null ],
+        [ "Demonstration scripts", "index.html#autotoc_md16", null ],
+        [ "Running unit tests", "index.html#autotoc_md17", null ],
+        [ "Benchmarks", "index.html#autotoc_md18", null ]
       ] ],
-      [ "Other Related Papers", "index.html#autotoc_md25", null ]
+      [ "Visualizations", "index.html#autotoc_md19", [
+        [ "MATLAB scripts", "index.html#autotoc_md20", null ],
+        [ "Python scripts", "index.html#autotoc_md21", null ]
+      ] ],
+      [ "Features", "index.html#autotoc_md22", [
+        [ "Highway RoadMap planner", "index.html#autotoc_md23", null ],
+        [ "OMPL sampled-based planners", "index.html#autotoc_md24", null ],
+        [ "Available robot types", "index.html#autotoc_md25", null ],
+        [ "Available planning scene environments", "index.html#autotoc_md26", null ],
+        [ "Demonstration using real robot in a lab environment", "index.html#autotoc_md27", null ]
+      ] ],
+      [ "Other Related Papers", "index.html#autotoc_md28", null ]
     ] ],
     [ "urdf-to-kdl", "d3/d9f/md__home_ruan_research_ws_hrm_src_util_external_kdl_parser_README.html", null ],
     [ "HighwayRoadMap.resources", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html", [
-      [ "Folder structure", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md30", null ],
-      [ "Name conventions", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md31", [
-        [ "Robot shape", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md32", null ],
-        [ "Environmental features", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md33", null ],
-        [ "Planning settings", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md34", null ]
+      [ "Folder structure", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md33", null ],
+      [ "Name conventions", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md34", [
+        [ "Robot shape", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md35", null ],
+        [ "Environmental features", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md36", null ],
+        [ "Planning settings", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md37", null ]
       ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
