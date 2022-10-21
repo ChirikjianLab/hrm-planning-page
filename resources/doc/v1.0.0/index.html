@@ -132,12 +132,22 @@ Core C++ library</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md7"></a>
 Visualization using Python</h2>
-<p >Install Python Dependencies through Python Virtual Environment on localhost: </p><div class="fragment"><div class="line"># Activate Virtual Environment Using the Pipfile</div>
+<p >Install Python dependencies. Go to <code>/demo/python</code> folder, then:</p>
+<ul>
+<li>Install using <code>conda</code> (recommended) <div class="fragment"><div class="line"># Install all the required dependencies</div>
+<div class="line">conda create --name hrm --file requirements.txt</div>
+<div class="line"> </div>
+<div class="line"># Activate virtual environment</div>
+<div class="line">conda activate hrm</div>
+</div><!-- fragment --></li>
+<li>Install using <code>pipenv</code> <div class="fragment"><div class="line"># Activate Virtual Environment Using the Pipfile</div>
 <div class="line">pipenv shell</div>
 <div class="line"> </div>
 <div class="line"># Install all the required dependencies</div>
-<div class="line">pipenv install -r demo/python/requirements.txt</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+<div class="line">pipenv install -r requirements.txt</div>
+</div><!-- fragment --></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Compiling Instructions</h1>
 <h2><a class="anchor" id="autotoc_md9"></a>
 On Local Host</h2>

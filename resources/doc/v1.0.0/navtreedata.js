@@ -61,13 +61,13 @@ var NAVTREE =
       ] ],
       [ "Other Related Papers", "index.html#autotoc_md28", null ]
     ] ],
-    [ "urdf-to-kdl", "d3/d9f/md__home_ruan_research_ws_hrm_src_util_external_kdl_parser_README.html", null ],
-    [ "HighwayRoadMap.resources", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html", [
-      [ "Folder structure", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md33", null ],
-      [ "Name conventions", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md34", [
-        [ "Robot shape", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md35", null ],
-        [ "Environmental features", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md36", null ],
-        [ "Planning settings", "d5/dfb/md__home_ruan_research_ws_hrm_resources_readme.html#autotoc_md37", null ]
+    [ "urdf-to-kdl", "d7/d70/md__home_ruan_public_repo_ws_hrm_src_util_external_kdl_parser_README.html", null ],
+    [ "HighwayRoadMap.resources", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html", [
+      [ "Folder structure", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md33", null ],
+      [ "Name conventions", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md34", [
+        [ "Robot shape", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md35", null ],
+        [ "Environmental features", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md36", null ],
+        [ "Planning settings", "d5/de1/md__home_ruan_public_repo_ws_hrm_resources_readme.html#autotoc_md37", null ]
       ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
@@ -96,7 +96,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/dc8/classhrm_1_1MultiBodyTree3D.html#af11da25396c8ab471dc6cfd5838a2711",
+"d3/dc9/GTestUtils-inl_8h_source.html",
 "d9/d9e/classhrm_1_1Interval.html"
 ];
 

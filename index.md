@@ -1,4 +1,4 @@
-[Sipu Ruan <sup>1</sup>](https://ruansp.github.io){:target="_blank"}, Karen L. Poblete <sup>2</sup>, [Hongtao Wu <sup>3</sup>](https://hongtaowu67.github.io){:target="_blank"}, Qianli Ma <sup>4</sup> and [Gregory Chirikjian <sup>1</sup>](https://www.eng.nus.edu.sg/me/staff/chirikjian-gregory-s/){:target="_blank"}
+[Sipu Ruan <sup>1</sup>](https://ruansp.github.io){:target="_blank"}, Karen L. Poblete <sup>2</sup>, [Hongtao Wu <sup>3</sup>](https://hongtaowu67.github.io){:target="_blank"}, [Qianli Ma <sup>4</sup>](https://github.com/RobotMa){:target="_blank"} and [Gregory Chirikjian <sup>1</sup>](https://www.eng.nus.edu.sg/me/staff/chirikjian-gregory-s/){:target="_blank"}
 
 <small><sup>1</sup> Department of Mechanical Engineering, National University of Singapore, Singapore</small>
 
@@ -16,8 +16,8 @@ Published in __IEEE Transactions on Robotics (T-RO)__
 ## Links
 - Paper: [T-RO](https://ieeexplore.ieee.org/document/9841604), [Arxiv](https://arxiv.org/abs/2104.04658){:target="_blank"}
 - Code:
-  - Source code: [https://www.github.com/ChirikjianLab/hrm/](https://www.github.com/ChirikjianLab/hrm/)
-  - API documentation: [v1.0.0 (latest)]({{site.baseurl}}/resources/doc/v1.0.0/index.html)
+  - Source code: [https://www.github.com/ChirikjianLab/hrm/](https://www.github.com/ChirikjianLab/hrm/){:target="_blank"}
+  - API documentation: [v1.0.0 (latest)]({{site.baseurl}}/resources/doc/v1.0.0/index.html){:target="_blank"}
 
 ## Benchmark experiments
 Baselines: PRM (with various samplers), LazyPRM, RRT, RRT-connect, EST.
